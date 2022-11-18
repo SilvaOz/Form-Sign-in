@@ -1,50 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
-    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- https://fontawesome.com/ -->
+    <!-- CDNJS -->
 
-    <!-- Los iconos tipo Solid de Fontawesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
-    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <link rel="stylesheet" type="text/css" href="./css/index.css" th:href="@{/css/index.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>Mi primer Login</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Form Login</title>
 </head>
 
 <body>
-    <div class="modal-dialog text-center">
-        <div class="col-sm-8 main-section">
-            <div class="modal-content">
-                <div class="col-12 user-img">
-                    <img src="./img/user.svg" />
-                    <h2>Login</h2>
-                </div>
-
-                <form action="index.js" method="post">
-                    <div class="form-group" id="user-group">
-                        <input type="text" class="form-control" placeholder="Username..." name="username" />
-                    </div>
-                    <div class="form-group" id="contrasena-group">
-                        <input type="password" class="form-control" placeholder="Password..." name="password" />
-                    </div>
-                    <button type="submit" class="btn btn-primary">Sing in </button>
-
-                    <!-- <i class="fas fa-sign-in-alt"></i> 
-                        esto podria ser interesante despues de Signin -->
-
-                    <div class="col-12 forgot">
-                        <a href="#">Forget your password?</a>
-
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+    <form action="index.js" method="post">
+        <legend>
+        <img src="./images/uzer.png" alt="avatar">
+        <h2>Login</h2>
+        </legend>               
+        <input type="text" class="icon" name="username" id="user" placeholder="    Username..." required />
+    
+        
+        <input type="password" class="icon" name="password" id="pass" placeholder ="    Password..." required />  
+    
+        <input type="submit"  value="Sign in" />
+        <a href="#">Forgot your password?</a>
+    </form>
 </body>
-
 </html>
